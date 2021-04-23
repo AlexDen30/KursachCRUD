@@ -2,7 +2,7 @@
 
 namespace CursachCRUD.Lecturer
 {
-    class LecturerModel
+    public class LecturerModel
     {
         [Key]
         public int Id { get; set; }
@@ -15,7 +15,7 @@ namespace CursachCRUD.Lecturer
 
         public int UserId { get; set; }
 
-        public public byte[] Photo { get; set; }
+        public byte[] Photo { get; set; }
 
     }
 }

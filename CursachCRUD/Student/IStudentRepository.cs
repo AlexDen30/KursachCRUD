@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace CursachCRUD.Student
 {
-    interface IStudentRepository
+    public interface IStudentRepository
     {
+        public IEnumerable<StudentModel> GetAllStudents();
+
+        public StudentModel GetStudentByStudId(int id);
+
+        public bool AddStudent(StudentModel student);
+
+        public bool UpdateStudent(StudentModel upStudent);
     }
 }

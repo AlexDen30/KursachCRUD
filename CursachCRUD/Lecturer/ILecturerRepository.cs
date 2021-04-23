@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace CursachCRUD.Lecturer
 {
-    class ILecturerRepository
+    public interface ILecturerRepository
     {
+        public IEnumerable<LecturerModel> GetAllLecturers();
+
+        public LecturerModel GetLecturerByLecId(int id);
+
+        public bool AddLecturer(LecturerModel lecturer);
+
+        public bool UpdateLecturer(LecturerModel updLec);
+
+        
     }
 }

@@ -8,5 +8,6 @@ namespace CursachCRUD.User
 {
     public class UserRepository : IUserRepository
     {
+
     }
 }
