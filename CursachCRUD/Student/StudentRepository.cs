@@ -46,10 +46,17 @@ namespace CursachCRUD.Student
                 "VALUES (@CRS, @USID, @ST)";
                 string sqlCheck = "SELECT id FROM public.site_user " +
                     "WHERE id = ID";
+                string sqlCheckStatus = "SELECT status FROM public.site_user " +
+                    "WHERE id = ID";
 
                 db.Open();
 
                 if (db.Query<string>(sqlCheck, new { ID = student.UserId }).FirstOrDefault() == null)
+                {
+                    return false;
+                }
+
+                if (db.Query<string>(sqlCheckStatus, new { ID = student.UserId }).FirstOrDefault() != "student")
                 {
                     return false;
                 }
