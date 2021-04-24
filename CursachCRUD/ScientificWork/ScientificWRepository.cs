@@ -5,7 +5,7 @@ using Npgsql;
 
 namespace CursachCRUD.ScientificWork
 {
-    public class ScientificWRepository : IScientificWRepository
+    public class ScientificWRepository //: IScientificWRepository
     {
     }
 }

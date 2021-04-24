@@ -17,7 +17,7 @@ namespace CursachCRUD.Student
             {
                 string sql = "SELECT student_id AS Id, course AS Course, " +
                      "status AS Status, user_id AS UserId " +
-                     "FROM public.global_news";
+                     "FROM public.student";
 
                 db.Open();
                 return db.Query<StudentModel>(sql);
@@ -30,7 +30,7 @@ namespace CursachCRUD.Student
             {
                 string sql = "SELECT student_id AS Id, course AS Course, " +
                      "status AS Status, user_id AS UserId " +
-                     "FROM public.global_news " +
+                     "FROM public.student " +
                      "WHERE student_id = @ID";
 
                 db.Open();
@@ -38,7 +38,7 @@ namespace CursachCRUD.Student
             }
         }
 
-        public bool AddStudent(StudentModel student)
+        public bool AddStudent(StudentModel  student)
         {
             using (var db = new NpgsqlConnection(connectionString))
             {
@@ -87,7 +87,7 @@ namespace CursachCRUD.Student
 
                 db.Open();
 
-                if (upStudent.Status == null && upStudent.Course == null)
+                if (upStudent.Status == null && upStudent.Course == 0)
                 {
                     return false;
                 }
@@ -97,15 +97,15 @@ namespace CursachCRUD.Student
                     return false;
                 }
 
-                if (upStudent.Status != null && upStudent.Course != null)
+                if (upStudent.Status != null && upStudent.Course != 0)
                 {
                     db.Execute(updAll, new { CRS = upStudent.Course, STS = upStudent.Status, ID = upStudent.Id });
                 } 
-                else if (upStudent.Status != null && upStudent.Course == null)
+                else if (upStudent.Status != null && upStudent.Course == 0)
                 {
                     db.Execute(updStatus, new { STS = upStudent.Status, ID = upStudent.Id });
                 }
-                else if (upStudent.Status == null && upStudent.Course != null)
+                else if (upStudent.Status == null && upStudent.Course != 0)
                 {
                     db.Execute(updCourse, new { CRS = upStudent.Course, ID = upStudent.Id });
                 }

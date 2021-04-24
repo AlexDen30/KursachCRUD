@@ -5,7 +5,7 @@ using Npgsql;
 
 namespace CursachCRUD.Lecturer
 {
-    public class WallMessageRepository : IWallMessageRepository
+    public class WallMessageRepository //: IWallMessageRepository
     {
     }
 }

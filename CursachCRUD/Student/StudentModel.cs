@@ -7,7 +7,7 @@ namespace CursachCRUD.Student
         [Key]
         public int Id { get; set; }
 
-        public string Course { get; set; }
+        public int Course { get; set; }
 
         public string Status { get; set; }
 

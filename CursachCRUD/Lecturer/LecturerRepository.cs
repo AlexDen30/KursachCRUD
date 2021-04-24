@@ -5,7 +5,7 @@ using Npgsql;
 
 namespace CursachCRUD.Lecturer
 {
-    public class LecturerRepository : ILecturerRepository
+    public class LecturerRepository //: ILecturerRepository
     {
     }
 }

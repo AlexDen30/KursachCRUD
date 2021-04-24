@@ -92,7 +92,7 @@ namespace CursachCRUD.User
                     return false;
                 }
 
-                if (newStatus != "lecturer" || newStatus != "student") return false;
+                if (newStatus != "lecturer" && newStatus != "student") return false;
 
                 db.Open();
                 db.Execute(sqlUpd, new { ID = id, NSTAT = newStatus });
@@ -122,7 +122,7 @@ namespace CursachCRUD.User
 
                 string status = db.Query<string>(sqlGetStatus, new { ID = id }).FirstOrDefault();
 
-                if (status == null)
+                if (status == "undefined")
                 {
                     db.Execute(sqlDeleteUser, new { ID = id });
                     return true;

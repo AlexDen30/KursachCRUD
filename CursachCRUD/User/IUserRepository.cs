@@ -13,9 +13,7 @@ namespace CursachCRUD.User
 
         public bool AddUser(UserModel user);
 
-        public bool ChangeStatusToLecturer(string newStatus, int id);
-
-        public bool ChangeStatusToStudent(string newStatus, int id);
+        public bool ChangeStatus(string newStatus, int id);
 
         public bool DeleteUser(int id);
     }
