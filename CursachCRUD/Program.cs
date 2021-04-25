@@ -1,5 +1,7 @@
 ﻿using CursachCRUD.Global_news;
+using CursachCRUD.Lecturer;
 using CursachCRUD.Student;
+using CursachCRUD.TeachingWork;
 using CursachCRUD.User;
 using System;
 using System.Collections.Generic;
@@ -63,6 +65,43 @@ namespace CursachCRUD
             //{
             //    Console.WriteLine(n.Id + " " + n.Status + " " + n.Course);
             //}
+
+
+            ILecturerRepository lecRep = new LecturerRepository();
+            IWallMessageRepository wallRep = new WallMessageRepository();
+            ITeachingWRepository teachRep = new TeachingWRepository();
+
+            //UserModel user = new UserModel();
+            //user.BirthDate = "10.02.1990";
+            //user.Email = "qwdqwdq";
+            //user.FIO = "aa SS AA";
+            //user.Password = "we2e2e";
+            //user.Sex = "female";
+
+            //usRep.AddUser(user);
+            //usRep.ChangeStatus("lecturer", 2);
+
+            //LecturerModel lect = new LecturerModel();
+            //lect.Achivements = "asasas";
+            //lect.Publications = "asasa";
+            //lect.TeachingInfo = "aaaaaa";
+            //lect.UserId = 2;
+            //lecRep.AddLecturer(lect);
+            //lecRep.UpdateLecturerAchivements("LOL", 1);
+            //for (int i = 0; i<8;i++)
+            //{
+            //    WallMessageModel msg = new WallMessageModel();
+            //    msg.Content = "Blalalal" + i.ToString();
+            //    msg.LecturerId = 1;
+            //    wallRep.AddPost(msg);
+            //}
+
+            //List<WallMessageModel> msgs = wallRep.GetAllPosts(1).ToList();
+            //foreach (WallMessageModel n in msgs)
+            //{
+            //    Console.WriteLine(n.Id + " " + n.Content + " " + n.LecturerId);
+            //}
+
         }
     }
 }

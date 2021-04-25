@@ -4,11 +4,11 @@ namespace CursachCRUD.Lecturer
 {
     public interface IWallMessageRepository
     {
-        public IEnumerable<WallMessageModel> GetAllPosts();
+        public IEnumerable<WallMessageModel> GetAllPosts(int lecturerId);
 
         public IEnumerable<WallMessageModel> GetAllPostsBetween(int fromId, int toId);
 
-        public IEnumerable<WallMessageModel> GetLastFivePosts();
+        public IEnumerable<WallMessageModel> GetLastFivePosts(int lecturerId);
 
         public bool AddPost(WallMessageModel news);
 

@@ -10,8 +10,13 @@ namespace CursachCRUD.Lecturer
 
         public bool AddLecturer(LecturerModel lecturer);
 
-        public bool UpdateLecturer(LecturerModel updLec);
+        public bool UpdateLecturerAchivements(string achiv, int lecId);
 
-        
+        public bool UpdateLecturerPublications(string publ, int lecId);
+
+        public bool UpdateLecturerTeachingInfo(string teacInf, int lecId);
+
+        public bool UpdateLecturerPhoto(byte[] photo, int lecId);
+
     }
 }

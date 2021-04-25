@@ -7,7 +7,7 @@ namespace CursachCRUD.Lecturer
         [Key]
         public int Id { get; set; }
 
-        public string Achivments { get; set; }
+        public string Achivements { get; set; }
 
         public string Publications { get; set; }
 
