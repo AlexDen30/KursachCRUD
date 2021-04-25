@@ -4,12 +4,12 @@ namespace CursachCRUD.ScientificWork
 {
     public interface IScientificWRepository
     {
-        public IEnumerable<ScientificWorkModel> GetAllWorksByUserId(int id);
+        public IEnumerable<ScientificWorkModel> GetAllWorksByAuthorId(int id);
 
-        public ScientificWorkModel GetTeachingWorkByWorkID(int id);
+        public ScientificWorkModel GetScientificWorkByWorkID(int id);
 
         public bool AddWork(ScientificWorkModel work);
 
-        public bool UpdateWork(ScientificWorkModel updWork);
+        public bool UpdateWorkDocument(byte[] document, int workId);
     }
 }
