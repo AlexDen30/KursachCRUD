@@ -58,11 +58,11 @@ namespace CursachCRUD
             //stud.UserId = 1;
 
             //stRep.AddStudent(stud);
-            List<StudentModel> students = stRep.GetAllStudents().ToList();
-            foreach (StudentModel n in students)
-            {
-                Console.WriteLine(n.Id + " " + n.Status + " " + n.Course);
-            }
+            //List<StudentModel> students = stRep.GetAllStudents().ToList();
+            //foreach (StudentModel n in students)
+            //{
+            //    Console.WriteLine(n.Id + " " + n.Status + " " + n.Course);
+            //}
         }
     }
 }

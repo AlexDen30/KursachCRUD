@@ -11,6 +11,6 @@ namespace CursachCRUD.TeachingWork
 
         public bool AddWork(TeachingWorkModel work);
 
-        public bool UpdateWork(TeachingWorkModel updWork);
+        public bool UpdateWorkByWorkId(TeachingWorkModel updWork);
     }
 }
